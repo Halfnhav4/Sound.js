@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">        
+        <title>Podcasts</title>
+        <script type="text/javascript" src="$ound.js" charset="utf-8"></script>
+        <style type="text/css" media="screen">@import "sound.css";</style>
+
+     </head>
+	<body>
+		<h1>$ound</h1>
+		<div id="slider">
+			<div id="progress"></div>
+		</div>
+		<p>&nbsp;</p>
+		<div style="float: left;" id="elapsed"></div>
+		<div style="float: right;" id="remaining"></div>
+		<p>&nbsp;</p>
+		<button onClick="play();">Play</button>
+	</body>
+	<script>
+			mySound = new $ound('http://reviewstalker.com/wp-content/uploads/2011/10/03-Winter-68.mp3');
+			//mySound.play();
+			mySound.slider('slider');
+			mySound.elapsed('elapsed');
+			mySound.remaining('remaining')
+			
+			function play() {
+				
+				mySound.toggle();
+			}
+		</script>
+</html>
